@@ -40,7 +40,7 @@ class SlnCog(commands.Cog, name="リネ2M"):
             }
 
         url = "https://script.google.com/macros/s/" \
-              "AKfycbzV_37DrMkFeNSm9tdEOVi4WiSWoTcNfw754JFcsCKl7e8DyI71_kQL3ARLKwshiy4PJw/exec"
+              "AKfycbyMGoarvUoNlXfHWQTpzFyY1HdvZTpzcccBSqXV1mNLftuaMrrB8y0Vncn7lwt9VW8UgA/exec"
 
         headers = {
             'Content-Type': 'application/json',
