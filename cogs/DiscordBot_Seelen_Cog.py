@@ -23,7 +23,7 @@ class SlnCog(commands.Cog, name="リネ2M"):
                                   "!bのみ入力でボス予定表の表示です。\n\n"
                                   "!b␣[BOSS名]␣[時間(hh:mm)]で入力すると時間を更新します。\n"
                                   "括弧は入力不要です。␣は空白です。\n\n"
-                                  "!b␣リセット␣[時間(hh:mm)]と入力すると全ての討伐時間をリセットします。\n"
+                                  "!b␣メンテ␣[時間(hh:mm)]と入力すると全ての討伐時間をリセットします。\n"
                                   "リセット時間を入力しない場合6:50がデフォルトで入ります。")
     async def b(self, ctx, b_name='NoData', b_time='06:50'):
 
@@ -33,7 +33,7 @@ class SlnCog(commands.Cog, name="リネ2M"):
                 "hhmm": '',
                 "callFrom": 'getList'
             }
-        elif b_name == "リセット":
+        elif b_name == "メンテ":
             payload = {
                 "bossName": '',
                 "hhmm": b_time,
