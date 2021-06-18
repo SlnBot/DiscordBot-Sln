@@ -2,7 +2,6 @@
 import json
 import requests
 
-import discord
 # Bot Commands Frameworkのインポート
 from discord.ext import commands
 
