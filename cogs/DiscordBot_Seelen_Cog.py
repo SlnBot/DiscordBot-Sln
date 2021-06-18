@@ -37,7 +37,7 @@ class SlnCog(commands.Cog, name="リネ2M"):
             payload = {
                 "bossName": '',
                 "hhmm": b_time,
-                "callFrom": 'resetTime'
+                "callFrom": 'reSet'
             }
         else:
             payload = {
