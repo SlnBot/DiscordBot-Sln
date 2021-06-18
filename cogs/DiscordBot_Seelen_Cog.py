@@ -31,6 +31,12 @@ class SlnCog(commands.Cog, name="リネ2M"):
                 "hhmm": '',
                 "callFrom": 'getList'
             }
+        elif b_name == "リセット":
+            payload = {
+                "bossName": '',
+                "hhmm": b_time,
+                "callFrom": 'resetTime'
+            }
         else:
             payload = {
                 "bossName": b_name,
