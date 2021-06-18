@@ -56,7 +56,7 @@ class SlnCog(commands.Cog, name="リネ2M"):
             return False
         else:
             # print(resMsg["data"])
-            await ctx.send(resMsg["data"] + "、とハンゾー君が申しておる。")
+            await ctx.send(resMsg["data"] + "\nとハンゾー君が申しておる。")
             return True
 
 
