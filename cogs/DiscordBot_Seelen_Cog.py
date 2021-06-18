@@ -27,13 +27,13 @@ class SlnCog(commands.Cog, name="リネ2M"):
                                   "リセット時間を入力しない場合6:50がデフォルトで入ります。")
     async def b(self, ctx, b_name='NoData', b_time='06:50'):
 
-        if b_name == "NoData":
+        if b_name == 'NoData':
             payload = {
                 "bossName": '',
                 "hhmm": '',
                 "callFrom": 'getList'
             }
-        elif b_name == "メンテ":
+        elif b_name == 'メンテ':
             payload = {
                 "bossName": '',
                 "hhmm": b_time,
