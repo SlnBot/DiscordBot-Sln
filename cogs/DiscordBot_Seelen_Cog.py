@@ -20,9 +20,11 @@ class SlnCog(commands.Cog, name="リネ2M"):
         await ctx.send('我は不滅だ……')
 
     @commands.command(description="BOSS時間の更新や表示をします。\n"
-                                  "!bのみ入力でボス予定表の表示です。\n"
+                                  "!bのみ入力でボス予定表の表示です。\n\n"
                                   "!b␣[BOSS名]␣[時間(hh:mm)]で入力すると時間を更新します。\n"
-                                  "括弧は入力不要です。␣は空白です。")
+                                  "括弧は入力不要です。␣は空白です。\n\n"
+                                  "!b␣リセット␣[時間(hh:mm)]と入力すると全ての討伐時間をリセットします。\n"
+                                  "リセット時間を入力しない場合6:50がデフォルトで入ります。")
     async def b(self, ctx, b_name='NoData', b_time='06:50'):
 
         if b_name == "NoData":
