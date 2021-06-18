@@ -19,7 +19,7 @@ class SlnCog(commands.Cog, name="リネ2M"):
 
         await ctx.send('我は不滅だ……')
 
-    @commands.command(description="BOSS時間の更新や表示をします。\n"
+    @commands.command(description="BOSS時間の更新や表示をします。\n\n"
                                   "!bのみ入力でボス予定表の表示です。\n\n"
                                   "!b␣[BOSS名]␣[時間(hh:mm)]で入力すると時間を更新します。\n"
                                   "括弧は入力不要です。␣は空白です。\n\n"
