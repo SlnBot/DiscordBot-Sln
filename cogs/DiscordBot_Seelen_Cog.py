@@ -45,7 +45,7 @@ class SlnCog(commands.Cog, name="リネ2M"):
                 "hhmm": b_time,
                 "callFrom": ''
             }
-
+        print(payload)
         url = "https://script.google.com/macros/s/" \
               "AKfycbyMGoarvUoNlXfHWQTpzFyY1HdvZTpzcccBSqXV1mNLftuaMrrB8y0Vncn7lwt9VW8UgA/exec"
 
