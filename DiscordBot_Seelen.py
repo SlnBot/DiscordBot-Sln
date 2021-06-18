@@ -1,4 +1,3 @@
-# Bot Commands Frameworkをインポート
 import os
 import textwrap
 
