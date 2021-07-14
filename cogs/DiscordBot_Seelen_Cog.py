@@ -14,6 +14,7 @@ class SlnCog(commands.Cog, name="リネ2M"):
         self.bot = bot
 
     # コマンドの作成。コマンドはcommandデコレータで必ず修飾する。
+    @commands.command(descriotion="生存確認")
     async def ping(self, ctx):
         await ctx.send('我は不滅だ……')
 
