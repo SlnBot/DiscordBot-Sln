@@ -15,9 +15,6 @@ class SlnCog(commands.Cog, name="リネ2M"):
 
     # コマンドの作成。コマンドはcommandデコレータで必ず修飾する。
     async def ping(self, ctx):
-        """
-        生存確認
-        """
         await ctx.send('我は不滅だ……')
 
     @commands.command(description="BOSS時間の更新や表示をします。\n\n"
