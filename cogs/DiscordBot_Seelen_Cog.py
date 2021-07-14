@@ -14,8 +14,10 @@ class SlnCog(commands.Cog, name="リネ2M"):
         self.bot = bot
 
     # コマンドの作成。コマンドはcommandデコレータで必ず修飾する。
-    @commands.command(descriotion="生存確認")
     async def ping(self, ctx):
+        """
+        生存確認
+        """
         await ctx.send('我は不滅だ……')
 
     @commands.command(description="BOSS時間の更新や表示をします。\n\n"
@@ -62,7 +64,7 @@ class SlnCog(commands.Cog, name="リネ2M"):
             return False
         else:
             # print(resMsg["data"])
-            await ctx.send(resMsg["data"] + "\nとハンゾー君が申しておる。")
+            await ctx.send("【" + resMsg["data"] + "】とハンゾー君が申しておる。")
             return True
 
 
