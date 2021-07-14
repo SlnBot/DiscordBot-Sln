@@ -59,6 +59,7 @@ class SlnCog(commands.Cog, name="リネ2M"):
         except ValueError as e:
             await ctx.send("入力形式が間違っているのではないか……？")
             print(e)
+            print(response)
             return False
         else:
             # print(resMsg["data"])
