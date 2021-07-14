@@ -70,3 +70,4 @@ class SlnCog(commands.Cog, name="リネ2M"):
 def setup(bot):
     # SlnCogにBotを渡してインスタンス化し、Botにコグとして登録する。
     bot.add_cog(SlnCog(bot))
+    
