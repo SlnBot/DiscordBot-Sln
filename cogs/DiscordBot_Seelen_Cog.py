@@ -64,7 +64,7 @@ class BossTime(commands.Cog, name="リネ2Mボス時間管理"):
             }
 
         url = "https://script.google.com/macros/s/" \
-              "AKfycbwP2PnBAbhfd_QV41yQqIR3oKKldbm0oh4I5hhfdefV3647pJQ5CGnEjmqAC1W4T8p8/exec"
+              "AKfycbwMmNHseRhas8k6rDWZ_QymMQrEbPChhXdY4o-mhCIPDZLj9yU5EVBqVYn6qKCBRTTh4Q/exec"
 
         headers = {
             'Content-Type': 'application/json',
