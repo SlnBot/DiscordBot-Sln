@@ -93,6 +93,7 @@ class BossTime(commands.Cog, name="リネ2Mボス時間管理"):
                 embed.set_thumbnail(url="https://drive.google.com/uc?export=view&id=1HJ7jQxvFMOTgFZn2TS9JMF51hZyYII3E")
                 embed.add_field(name=resmsg["name"], value=resmsg["time"])
                 embed.add_field(name="メモ", value=resmsg["memo"])
+
             elif resmsg["title"] == '更新失敗……':
                 embed = discord.Embed(
                     title=resmsg["title"],
@@ -103,6 +104,11 @@ class BossTime(commands.Cog, name="リネ2Mボス時間管理"):
                 embed.set_author(name=resmsg["username"],
                                  icon_url=resmsg["avatar_url"]
                                  )
+
+            elif resmsg["title"] == 'List':
+                await ctx.send(resmsg["data"])
+                return
+
             else:
                 embed = discord.Embed(
                     title=resmsg["title"],
