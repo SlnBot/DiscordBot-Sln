@@ -36,8 +36,8 @@ class BossTime(commands.Cog, name="リネ2Mボス時間管理"):
                                   "[湧き位置]がない場合、デフォルトで”不明”となります。\n"
                                   "括弧は入力不要です。␣は空白です。\n\n"
                                   "!b␣メンテ␣[時間(hh:mm)]と入力すると全ての討伐時間をリセットします。\n"
-                                  "リセット時間を入力しない場合”05:00”がデフォルトで入ります。")
-    async def b(self, ctx, b_name='NoData', b_time='05:00', b_position='不明'):
+                                  "リセット時間を入力しない場合”04:50”がデフォルトで入ります。")
+    async def b(self, ctx, b_name='NoData', b_time='04:50', b_position='-'):
         """
         ボス時間の更新や表示を行います。
         """
