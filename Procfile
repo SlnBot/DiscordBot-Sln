@@ -1,1 +1,1 @@
-discordbot: python DiscordBot_Seelen.py
+discordbot: python DiscordBot_Shilen.py
