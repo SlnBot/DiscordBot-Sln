@@ -1,5 +1,6 @@
 # GASを利用するためのインポート
 import json
+import discord
 import requests
 
 # Bot Commands Frameworkのインポート
@@ -32,12 +33,12 @@ class BossTime(commands.Cog, name="リネ2Mボス時間管理"):
     @commands.command(description="BOSS時間の更新や表示をします。\n\n"
                                   "!bのみ入力でボス予定表の表示です。\n\n"
                                   "!b␣[BOSS名]␣[時間(hh:mm)]　と入力すると時間を更新します。\n"
-                                  "!b␣[BOSS名]␣[時間(hh:mm)]␣[湧き位置]　と入力すると時間と前回湧き位置を更新します。\n"
-                                  "[湧き位置]がない場合、デフォルトで”不明”となります。\n"
+                                  "!b␣[BOSS名]␣[時間(hh:mm)]␣[メモ]　と入力すると時間と前回湧き位置を更新します。\n"
+                                  "[メモ]がない場合、デフォルトで”NoData”となります。\n"
                                   "括弧は入力不要です。␣は空白です。\n\n"
                                   "!b␣メンテ␣[時間(hh:mm)]と入力すると全ての討伐時間をリセットします。\n"
                                   "リセット時間を入力しない場合”04:50”がデフォルトで入ります。")
-    async def b(self, ctx, b_name='NoData', b_time='04:50', b_position='-'):
+    async def b(self, ctx, b_name='NoData', b_time='04:50', b_position='NoData'):
         """
         ボス時間の更新や表示を行います。
         """
@@ -73,17 +74,50 @@ class BossTime(commands.Cog, name="リネ2Mボス時間管理"):
         response = requests.post(url, data=json.dumps(payload), headers=headers)
 
         try:
-            resMsg = response.json()
+            resmsg = response.json()
         except ValueError as e:
             await ctx.send("入力形式が間違っているのではないか……？")
             print(e)
             print(response.text)
             return False
         else:
-            # print(resMsg["data"])
-            await ctx.send(resMsg["data"] + "\nとの知らせだ。")
-            return True
+            if resmsg["title"] == '更新成功！':
+                embed = discord.Embed(
+                    title=resmsg["title"],
+                    colour=resmsg["color"],
+                    description=resmsg["content"]
+                )
+                embed.set_author(name=resmsg["username"],
+                                 icon_url=resmsg["avatar_url"]
+                                 )
+                embed.set_thumbnail(url="https://drive.google.com/uc?export=view&id=1HJ7jQxvFMOTgFZn2TS9JMF51hZyYII3E")
+                embed.add_field(name=resmsg["name"], value=resmsg["time"])
+                embed.add_field(name="メモ", value=resmsg["memo"])
+            elif resmsg["title"] == '更新失敗……':
+                embed = discord.Embed(
+                    title=resmsg["title"],
+                    colour=resmsg["color"],
+                    description=resmsg["content"]
+                )
+                embed.set_thumbnail(url="https://drive.google.com/uc?export=view&id=11xAjHJhkMfF8lLwvhqpc5VBNe3E0dhTn")
+                embed.set_author(name=resmsg["username"],
+                                 icon_url=resmsg["avatar_url"]
+                                 )
+            else:
+                embed = discord.Embed(
+                    title=resmsg["title"],
+                    colour=resmsg["color"],
+                    description=resmsg["content"]
+                )
+                embed.set_author(name=resmsg["username"],
+                                 icon_url=resmsg["avatar_url"]
+                                 )
 
+            await ctx.send("ハンゾーくんからの密書が届いたぞ。")
+            await ctx.send(embed=embed)
+
+            # print(resmsg)
+            return True
 
 # Bot本体側からコグを読み込む際に呼び出される関数。
 def setup(bot):
