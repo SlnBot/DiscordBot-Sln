@@ -5,7 +5,7 @@ import discord
 from discord.ext import commands
 
 INITIAL_EXTENSIONS = [
-    'cogs.DiscordBot_Seelen_Cog'
+    'cogs.DiscordBot_Shilen_Cog'
 ]
 
 # 自分のBotのアクセストークンに置き換えてください
