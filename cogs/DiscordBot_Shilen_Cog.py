@@ -119,7 +119,6 @@ class BossTime(commands.Cog, name="リネ2Mボス時間管理"):
                                  icon_url=resmsg["avatar_url"]
                                  )
 
-            await ctx.send("ハンゾーくんからの密書が届いたぞ。")
             await ctx.send(embed=embed)
 
             # print(resmsg)
