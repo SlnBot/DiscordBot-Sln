@@ -3,9 +3,12 @@ import json
 import discord
 import requests
 
+import os
+
 # Bot Commands Frameworkのインポート
 from discord.ext import commands
 
+script_url = os.environ['SHEET_SCRIPT_URL']
 
 class BasicCommands(commands.Cog, name="基本コマンド"):
     """
@@ -64,8 +67,7 @@ class BossTime(commands.Cog, name="リネ2Mボス時間管理"):
                 "callFrom": ''
             }
 
-        url = "https://script.google.com/macros/s/" \
-              "AKfycbwMmNHseRhas8k6rDWZ_QymMQrEbPChhXdY4o-mhCIPDZLj9yU5EVBqVYn6qKCBRTTh4Q/exec"
+        url = script_url
 
         headers = {
             'Content-Type': 'application/json',
