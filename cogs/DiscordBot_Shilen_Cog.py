@@ -90,7 +90,7 @@ class BossTime(commands.Cog, name="リネ2Mボス時間管理"):
                 embed.set_author(name=resmsg["username"],
                                  icon_url=resmsg["avatar_url"]
                                  )
-                embed.set_thumbnail(url="https://drive.google.com/uc?export=view&id=1HJ7jQxvFMOTgFZn2TS9JMF51hZyYII3E")
+                embed.set_thumbnail(url=resmsg["thumbnail_url"])
                 embed.add_field(name=resmsg["name"], value=resmsg["time"])
                 embed.add_field(name="メモ", value=resmsg["memo"])
 
@@ -100,7 +100,7 @@ class BossTime(commands.Cog, name="リネ2Mボス時間管理"):
                     colour=resmsg["color"],
                     description=resmsg["content"]
                 )
-                embed.set_thumbnail(url="https://drive.google.com/uc?export=view&id=11xAjHJhkMfF8lLwvhqpc5VBNe3E0dhTn")
+                embed.set_thumbnail(url=resmsg["thumbnail_url"])
                 embed.set_author(name=resmsg["username"],
                                  icon_url=resmsg["avatar_url"]
                                  )
