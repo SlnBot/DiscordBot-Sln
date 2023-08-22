@@ -5,7 +5,7 @@
 ### DiscordBot_Shilen.py
 PythonによるDiscordBotのアプリケーションファイルです。
 
-### DiscordBot_Shilen_Cog.py
+### cogs/DiscordBot_Shilen_Cog.py
 メイン処理のcog
 
 ### requirements.txt
