@@ -2,8 +2,10 @@
 
 ## 各種ファイル情報
 
-### discordbot.py
+### DiscordBot_Shilen.py
 PythonによるDiscordBotのアプリケーションファイルです。
+
+### DiscordBot_Shilen_Cog.py
 
 ### requirements.txt
 使用しているPythonのライブラリ情報の設定ファイルです。
