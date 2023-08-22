@@ -6,7 +6,7 @@
 PythonによるDiscordBotのアプリケーションファイルです。
 
 ### cogs/DiscordBot_Shilen_Cog.py
-メイン処理のcog
+BOTコマンド処理のcog
 
 ### requirements.txt
 使用しているPythonのライブラリ情報の設定ファイルです。
