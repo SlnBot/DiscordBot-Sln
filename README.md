@@ -1,4 +1,5 @@
 # DiscordBot-Sln
+（ボス狩り用）
 
 ## 各種ファイル情報
 
@@ -6,7 +7,12 @@
 PythonによるDiscordBotのアプリケーションファイルです。
 
 ### cogs/DiscordBot_Shilen_Cog.py
-BOTコマンド処理のcog
+BOTコマンド処理。
+
+### .gsファイル
+グーグルスプレッドシートの情報をDiscordと連携操作するためのGASサンプル。
+Momentライブラリを利用。
+
 
 ### requirements.txt
 使用しているPythonのライブラリ情報の設定ファイルです。
