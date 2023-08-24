@@ -38,7 +38,7 @@ function getBossList(){
 
 
 function sendDiscordBossList(textMessage){
-  const WEBHOOK_URL = "https://discordapp.com/api/webhooks/933508242930278460/TBkevHCOlYLulF6clJL976m79kft8VFciSufcj8BwfoTMsB7WKxtFEt3SGBX3WRoeYRi";
+  const WEBHOOK_URL = "DiscordのWEBHOOK URL";
 
   const payload = {
     username: "ハンゾーくん",
