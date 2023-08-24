@@ -9,7 +9,7 @@ PythonによるDiscordBotのアプリケーションファイルです。
 ### cogs/DiscordBot_Shilen_Cog.py
 BOTコマンド処理。
 
-### .gsファイル
+### gas/*.gsファイル
 グーグルスプレッドシートの情報をDiscordと連携操作するためのGASサンプル。
 Momentライブラリを利用。
 
