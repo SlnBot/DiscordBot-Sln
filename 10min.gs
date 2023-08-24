@@ -2,7 +2,7 @@ function bossTimer() {
   var bossName, nextPopTime, popTime, popPosition, jsonData, textMessage;
   var now      = Moment.moment(); //現在日時を取得
   var ss       = SpreadsheetApp.getActiveSpreadsheet();
-  var sheet    = ss.getSheetByName('ボス管理表');
+  var sheet    = ss.getSheetByName('シート名');
   var rows     = sheet.getDataRange().getValues();
 
   //自動更新用判定時間
